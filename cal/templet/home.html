@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   
+
+        <title > Love calculator </title >
+        <link rel="stylesheet" href="{% static 'home.css' %}" >
+    
+</head>
+<body style="background-color:aqua">
+    <center>
+        <h1> Love calculator </h1>
+        <div style="color:red"><h2>How much do you love your partner</h2></div>
+        <img src="{% static 'love.jpg' %}" width="500" height="333">
+        <form action="\" method="post">
+            {% csrf_token %}
+            <label for="fname">Enter your name:</label><br />
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Enter your partner/crush name:</label><br />
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+
+        <!--<button onclick=" Calculate</button>
+
+         {% if name %}
+            <p id="one"></p>
+            <button onclick="random()">Calculate</button>
+            <script>
+                function random(){
+                document.getElementById("one").innerHTML = Math.floor(Math.random() * 100);
+    }
+            </script>
+            {% endif %}
+              -->
+
+
+
+
+    </center>
+    </td>
+</body>
+</html>
